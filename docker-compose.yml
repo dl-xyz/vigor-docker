@@ -1,0 +1,15 @@
+services:
+  vigor:
+    container_name: vigor-auth
+    ports:
+      - "8080"
+    environment:
+      - iss=$iss
+      - sub=$sub
+      - exp=$exp
+      - allow_namespace=$allow_namespace
+      - name=$name
+      - mongodb_host=$mongodb_host
+    volumes:
+      - vigor_auth_keys:/keys
+    build:
