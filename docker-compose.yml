@@ -1,3 +1,4 @@
+version: "3.9"
 services:
   vigor:
     container_name: vigor-auth
@@ -7,9 +8,10 @@ services:
       - iss=$iss
       - sub=$sub
       - exp=$exp
-      - allow_namespace=$allow_namespace
       - name=$name
       - mongodb_host=$mongodb_host
     volumes:
       - vigor_auth_keys:/keys
-    build:
+    build: .
+volumes:
+  vigor_auth_keys:
