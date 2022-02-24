@@ -13,5 +13,13 @@ services:
     volumes:
       - vigor_auth_keys:/keys
     build: .
+  mongodb:
+    container_name: mongodb-dlxyz
+    image: mongo
+    ports:
+      - "27017"
+    volumes:
+      - dlxyz_db:/data/db
 volumes:
   vigor_auth_keys:
+  dlxyz_db:
