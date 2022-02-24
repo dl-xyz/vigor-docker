@@ -1,5 +1,5 @@
 FROM python:3
-WORKDIR vigor
+WORKDIR ./vigor
 
 RUN mkdir /opt/vigor/
 COPY LICENSE /opt/vigor/
