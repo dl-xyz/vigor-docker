@@ -13,6 +13,8 @@ services:
     volumes:
       - vigor_auth_keys:/keys
     build: .
+    depends_on:
+      - "mongodb"
   mongodb:
     container_name: mongodb
     image: mongo
