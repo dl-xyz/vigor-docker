@@ -13,6 +13,7 @@ services:
     volumes:
       - vigor_auth_keys:/keys
     build: .
+    image: vigor-auth
     depends_on:
       - "mongodb"
   mongodb:
