@@ -14,7 +14,7 @@ services:
       - vigor_auth_keys:/keys
     build: .
   mongodb:
-    container_name: mongodb-dlxyz
+    container_name: mongodb
     image: mongo
     ports:
       - "27017"
