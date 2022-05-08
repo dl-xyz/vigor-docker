@@ -16,6 +16,7 @@ services:
     image: vigor-auth
     depends_on:
       - "mongodb"
+    restart: always
   mongodb:
     container_name: mongodb
     image: mongo
@@ -23,6 +24,7 @@ services:
       - "27017"
     volumes:
       - dlxyz_db:/data/db
+    restart: always
 volumes:
   vigor_auth_keys:
   dlxyz_db:
