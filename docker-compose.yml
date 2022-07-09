@@ -14,17 +14,6 @@ services:
       - vigor_auth_keys:/keys
     build: .
     image: vigor-auth
-    depends_on:
-      - "mongodb"
-    restart: always
-  mongodb:
-    container_name: mongodb
-    image: mongo
-    ports:
-      - "27017"
-    volumes:
-      - dlxyz_db:/data/db
     restart: always
 volumes:
   vigor_auth_keys:
-  dlxyz_db:
